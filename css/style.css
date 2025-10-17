@@ -1,0 +1,212 @@
+body {
+    font-family: 'Press Start 2P' cursive;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    background-color: #16213e;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #0f3460;
+}
+
+h1 {
+    color: #e94560;
+}
+
+.placar {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    margin-bottom: 20px auto;
+    padding: 10px;
+    background-color: #000;
+    border: 4px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px #000;
+    width: 80%;
+}
+
+#placar-jogador,
+#placar-maquina {
+    color: #fcdf3a;
+    text-shadow: 2px 2px 0px #c14444;
+}
+
+.arena {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    height: 450px;
+    margin-bottom: 20px;
+}
+
+.carta {
+    width: 300px;
+    height: 100%;
+    background-color: #e0e0e0;
+    color: #16213e;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.carta.verso {
+    background-color: #e94560;
+    background-image: url("https://i.imgur.com/M1y0_V5.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-nome {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-imagem {
+    width: 80%;
+    max-height: 120px;
+    object-fit: contain;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.carta-atributos ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+
+
+.carta-atributos li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #e94560;
+    color: white;
+    transform: scale(1.05);
+}
+
+li:focus{
+    background-color: #e94560;
+    color: white;
+    transform: scale(1.05); 
+}
+
+li:active{
+    background-color: #e94560;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+.controles button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #0f3460;
+    color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.controles button :disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.controles button:hover:not(:disabled) {
+    background-color: #e94560;
+}
+
+.resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    height: 30px;
+    font-weight: bold;
+}
+
+.pause-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(22, 33, 62, 0.85);
+    color: #e94560;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-shadow: 3px 3px 0px #1a1a2e;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+#btn-pausar {
+    z-index: 11;
+    position: relative;
+}
+
+@media screen and (max-width:600px) {
+
+    .container {
+        padding: 10px;
+    }
+
+    .placar {
+        font-size: 1.5rem;
+        width: 90%;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+
+    .arena {
+        height: 300px;
+        gap: 8px;
+    }
+
+    .carta {
+        width: 170px;
+        padding: 15px;
+    }
+
+    .carta-atributos{
+        display: flex;
+        padding: 0;
+        height: 0;
+    }
+
+.carta-atributos li {
+    padding: 5px;
+    font-size: 0.9rem;
+    width: 160px;
+}
+}
