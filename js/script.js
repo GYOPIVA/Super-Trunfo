@@ -137,7 +137,7 @@ function comparar(atributoSelecionado) {
         atributosLi.forEach(li => li.onclick = null);
 }
 
-function fimDejogo(){
+function fimDeJogo(){
 const btnJogar = document.getElementById("btn-jogar");
 const btnPausar = document.getElementById("btn-pausar");
 const btnProximaRodada = document.getElementById("btn-proxima-rodada");
@@ -154,5 +154,6 @@ btnJogar.textContent="Jogar novamente";
 btnJogar.replaceWith(btnjogar.cloneNode(true));
 document.getElementById("btn-jogar").addEventListener("click", ()=> window.location.reload());
 } 
+
 
 
